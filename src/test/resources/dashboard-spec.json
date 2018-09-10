@@ -1,0 +1,927 @@
+{
+	"name": "New dashboard",
+	"layout": {
+		"id": "page0",
+		"items": [{
+			"id": "model0000016597483fbd_00000000",
+			"items": [{
+				"id": "model0000016597483fbd_00000001",
+				"css": "templateBox aspectRatio_default",
+				"items": [{
+					"id": "model0000016597483fbd_00000002",
+					"style": {
+						"top": "0%",
+						"left": "0%",
+						"right": "75%",
+						"bottom": "75%"
+					},
+					"type": "templateDropZone",
+					"templateName": "dz1",
+					"relatedLayouts": "|model000001659748739a_00000003|"
+				},
+				{
+					"id": "model0000016597483fbd_00000003",
+					"css": "noBorderLeft",
+					"style": {
+						"top": "0%",
+						"left": "25%",
+						"right": "50%",
+						"bottom": "75%"
+					},
+					"type": "templateDropZone",
+					"templateName": "dz3",
+					"relatedLayouts": "|model000001659749479a_00000003|"
+				},
+				{
+					"id": "model0000016597483fbd_00000004",
+					"css": "noBorderLeft",
+					"style": {
+						"top": "0%",
+						"left": "50%",
+						"right": "25%",
+						"bottom": "75%"
+					},
+					"type": "templateDropZone",
+					"templateName": "dz4",
+					"relatedLayouts": "|model000001659748f937_00000003|"
+				},
+				{
+					"id": "model0000016597483fbd_00000005",
+					"css": "noBorderLeft",
+					"style": {
+						"top": "0%",
+						"left": "75%",
+						"right": "00%",
+						"bottom": "75%"
+					},
+					"type": "templateDropZone",
+					"templateName": "dz5",
+					"relatedLayouts": "|model00000165974998f5_00000000|"
+				},
+				{
+					"id": "model0000016597483fbe_00000000",
+					"css": "noBorderTop",
+					"style": {
+						"top": "25%",
+						"left": "0%",
+						"right": "0%",
+						"bottom": "0%"
+					},
+					"type": "templateDropZone",
+					"templateName": "dz2",
+					"relatedLayouts": "|model00000165974a42c6_00000000|"
+				},
+				{
+					"id": "model00000165974a42c6_00000000",
+					"style": {
+						"top": "24.965893587994543%",
+						"left": "0.07507507507507508%",
+						"height": "74.89768076398363%",
+						"width": "99.92492492492492%"
+					},
+					"type": "widget",
+					"relatedLayouts": "model0000016597483fbe_00000000"
+				},
+				{
+					"id": "model00000165974998f5_00000000",
+					"style": {
+						"top": "0.1364256480218281%",
+						"left": "75.07507507507508%",
+						"height": "24.69304229195089%",
+						"width": "24.924924924924923%"
+					},
+					"type": "widget",
+					"relatedLayouts": "model0000016597483fbd_00000005"
+				},
+				{
+					"id": "model000001659749479a_00000003",
+					"style": {
+						"top": "0.1364256480218281%",
+						"left": "25%",
+						"height": "24.69304229195089%",
+						"width": "24.924924924924923%"
+					},
+					"type": "widget",
+					"relatedLayouts": "model0000016597483fbd_00000003"
+				},
+				{
+					"id": "model000001659748f937_00000003",
+					"style": {
+						"top": "0.1364256480218281%",
+						"left": "50%",
+						"height": "24.69304229195089%",
+						"width": "24.924924924924923%"
+					},
+					"type": "widget",
+					"relatedLayouts": "model0000016597483fbd_00000004"
+				},
+				{
+					"id": "model000001659748739a_00000003",
+					"style": {
+						"top": "0.1364256480218281%",
+						"left": "0.07507507507507508%",
+						"height": "24.69304229195089%",
+						"width": "24.84984984984985%"
+					},
+					"type": "widget",
+					"relatedLayouts": "model0000016597483fbd_00000002"
+				}],
+				"type": "scalingAbsolute"
+			}],
+			"type": "container",
+			"title": {
+				"translationTable": {
+					"Default": "Tab 2"
+				}
+			},
+			"templateName": "Template4"
+		}],
+		"style": {
+			"height": "100%"
+		},
+		"type": "tab"
+	},
+	"theme": "defaultTheme",
+	"version": 1008,
+	"eventGroups": [{
+		"id": "model0000016597483fbd_00000000:1",
+		"widgetIds": ["model000001659748739a_00000003",
+		"model000001659748f937_00000003",
+		"model000001659749479a_00000003",
+		"model00000165974998f5_00000000",
+		"model00000165974a42c6_00000000"]
+	}],
+	"properties": {
+		"defaultLocale": "Default"
+	},
+	"pageContext": [],
+	"dataSources": {
+		"version": "1.0",
+		"sources": [{
+			"id": "model000001659747504d_00000002",
+			"assetId": "assetId000001659747504d_00000000",
+			"clientId": "analysis-v.1.0.0a",
+			"module": {
+				"xsd": "https://ibm.com/daas/module/1.0/module.xsd",
+				"label": "Analysis Module",
+				"identifier": "analysis-v.1.0.0a",
+				"source": {
+					"id": "StringID",
+					"user": "{enc}VxeMSEEAIuvjrpOgKovqhEwoPknALEGfetMpfLuwmLnvHlLchuyaMgr8ydMNTKHdhqpuezlXV2b8A70RxzYE+gObdZKI4P9DEQ+40wZKfhI8DS0+1w7DyjeNBU7PbQrmVOaeBaYWMqATLtdMrzoi4KUVeni0/NfOsdQv6r1Hfi/TDtSgYeM8W+EHuO8h78RA8CtMGif9/2/PlcDcPN+yH4+9sT4ElLrXEkAuuQsRShFjEVmplYOnraEkaNBSPbzEpMd7RTWpi//DUfdZ/1/2VJETdxqrp1fMxBkzt7/0Yew9/+qUh8GKnCUkyCRj5XR9YGdbp11PhH9eYK7Buu4W1A==",
+					"password": "{enc}Guot1Rcoj8I4Rh9hwE+5RoAAqooOnkwfliss//tEjKeZ8OySoZFjgbQHA7ZIcYZpPWPxbGeGjOwhspTJ4Em1BvBdM+kL0PNTVnriq2pjUwNkEInzjfiNArsdHrlASL2qcuQ5wHcnIw5QG42Z4tF0lGtwwOE90WLqTf1oZMaGrZddqpTtTmVs6FONikr/VrkRNcy3/H9P1dyCiTuNddDLmI//8Kn0Df0j7v1aBcYnY+4Or6Pw0m2zf5iftWPduxbWN8JGRv+MjyXb6Jvjh4Y4yKX33OvWfP+axS0K7uL65wZOfUYZq9+4scdSAtut9b4um41K28c4v7Po1hH9wjk5xA==",
+					"jdbc": {
+						"jdbcUrl": "{enc}g+Z//Sopr5o0yyjk4PrOlrZM3ZiszUiIPDkLaEPndZHTok1RLpY6GlTE0+EDUXUbowQ2roVFgaENoRbT47CPqgglIziVOtxLlX2o4244CZ40GOqpsKGtsQFH1LuuR0vagvKyjr2vp62xm8wv9MTUIK+nYXZcg4tgXHWd7oLQb2nX6Gaq79IXeuIXx+mqU5KsTcClrxHYIw7C66FfA41kTAcZMsrmQDD1QE4/RBXEW2ELzVagxQJNc9e20p7Khs6jc+WfdAx/FR3n8NX+JJx7N9Ypgnaz9I9hasIzDsKp9X7HjPuW+40yRgBUUOwUzo/vvYfC01khm93+PK+odS3TSQ==",
+						"driverClassName": "com.ibm.db2.jcc.DB2Driver",
+						"connectionProperties": ""
+					}
+				},
+				"table": {
+					"name": "DIMENSION_ANALYSIS",
+					"description": "some description",
+					"column": [{
+						"name": "ID",
+						"description": "BIGINT",
+						"datatype": "BIGINT",
+						"nullable": false,
+						"label": "ID",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "SET",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(10)",
+						"nullable": false,
+						"label": "SET",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "DOCID",
+						"description": "CHAR",
+						"datatype": "CHAR(32)",
+						"nullable": false,
+						"label": "DOCID",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "DATATYPE",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "DATATYPE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "ACCOUNTINFO_ACCOUNTIDKEY",
+						"description": "CHAR",
+						"datatype": "CHAR(32)",
+						"nullable": false,
+						"label": "ACCOUNTINFO_ACCOUNTIDKEY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "ACCOUNTINFO_ACCOUNTSTATE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(32)",
+						"nullable": false,
+						"label": "ACCOUNTINFO_ACCOUNTSTATE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CLIENT",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(128)",
+						"nullable": false,
+						"label": "CASEINFO_CLIENT",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_USER",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(128)",
+						"nullable": false,
+						"label": "CASEINFO_USER",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CASEIDKEY",
+						"description": "CHAR",
+						"datatype": "CHAR(32)",
+						"nullable": false,
+						"label": "CASEINFO_CASEIDKEY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_SAMPLEIDKEY",
+						"description": "CHAR",
+						"datatype": "CHAR(32)",
+						"nullable": false,
+						"label": "CASEINFO_SAMPLEIDKEY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_ANALYSISIDKEY",
+						"description": "CHAR",
+						"datatype": "CHAR(32)",
+						"nullable": false,
+						"label": "CASEINFO_ANALYSISIDKEY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_SAMPLENAME",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(64)",
+						"nullable": false,
+						"label": "CASEINFO_SAMPLENAME",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CASEID",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(64)",
+						"nullable": false,
+						"label": "CASEINFO_CASEID",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERID",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERID",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERTYPE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(256)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERTYPE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERCATEGORYID",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "CASEINFO_CANCERCATEGORYID",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_ANALYSISDATE",
+						"description": "TIMESTAMP",
+						"datatype": "TIMESTAMP",
+						"nullable": false,
+						"label": "CASEINFO_ANALYSISDATE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_ANALYSISDATEMILLIS",
+						"description": "BIGINT",
+						"datatype": "BIGINT",
+						"nullable": false,
+						"label": "CASEINFO_ANALYSISDATEMILLIS",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_ANALYSISDATESECONDS",
+						"description": "BIGINT",
+						"datatype": "BIGINT",
+						"nullable": false,
+						"label": "CASEINFO_ANALYSISDATESECONDS",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_AGE",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "CASEINFO_AGE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERSYSTEM",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(256)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERSYSTEM",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERGENERALNAME",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(256)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERGENERALNAME",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERGENERALCODE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERGENERALCODE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERSPECIFICNAME",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(256)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERSPECIFICNAME",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CASEINFO_CANCERSPECIFICCODE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "CASEINFO_CANCERSPECIFICCODE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "REPORTINFO_SERVICEVERSION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(8)",
+						"nullable": false,
+						"label": "REPORTINFO_SERVICEVERSION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_EMPTY",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "MPA_EMPTY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_NAME",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "MPA_NAME",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_CNVSUMMARY",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(32)",
+						"nullable": false,
+						"label": "MPA_CNVSUMMARY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_CNVCLASSIFICATION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(24)",
+						"nullable": false,
+						"label": "MPA_CNVCLASSIFICATION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_CNVFUNCTIONIMPACT",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(24)",
+						"nullable": false,
+						"label": "MPA_CNVFUNCTIONIMPACT",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_CNVSOURCE",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "MPA_CNVSOURCE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_ALLMUTATIONSFLAG",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(32)",
+						"nullable": false,
+						"label": "MPA_ALLMUTATIONSFLAG",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_GESUMMARY",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(32)",
+						"nullable": false,
+						"label": "MPA_GESUMMARY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_FUSION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(64)",
+						"nullable": false,
+						"label": "MPA_FUSION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_MUTATIONS_EMPTY",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "MPA_MUTATIONS_EMPTY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_MUTATIONS_AAPOSITION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(32)",
+						"nullable": false,
+						"label": "MPA_MUTATIONS_AAPOSITION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_MUTATIONS_ISINACTIVATING_MUTATION",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "MPA_MUTATIONS_ISINACTIVATING_MUTATION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_MUTATIONS_CLASSIFICATION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(24)",
+						"nullable": false,
+						"label": "MPA_MUTATIONS_CLASSIFICATION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_MUTATIONS_SOURCE",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "MPA_MUTATIONS_SOURCE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_MUTATIONS_RSPOSITION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "MPA_MUTATIONS_RSPOSITION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_ALLDRUGS_EMPTY",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "MPA_ALLDRUGS_EMPTY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_ALLDRUGS_VALUE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "MPA_ALLDRUGS_VALUE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_ALLDRUGS_DRUGLEVEL",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(2)",
+						"nullable": false,
+						"label": "MPA_ALLDRUGS_DRUGLEVEL",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_ALLDRUGS_LOE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(2)",
+						"nullable": false,
+						"label": "MPA_ALLDRUGS_LOE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_ALLDRUGS_CLASSIFICATION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(24)",
+						"nullable": false,
+						"label": "MPA_ALLDRUGS_CLASSIFICATION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_TARGETS_EMPTY",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "MPA_TARGETS_EMPTY",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_TARGETS_TARGET",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(16)",
+						"nullable": false,
+						"label": "MPA_TARGETS_TARGET",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_FUSIONDETAILS_NAME",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(64)",
+						"nullable": false,
+						"label": "MPA_FUSIONDETAILS_NAME",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_FUSIONDETAILS_CLASSIFICATION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(24)",
+						"nullable": false,
+						"label": "MPA_FUSIONDETAILS_CLASSIFICATION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_FUSIONDETAILS_SOURCE",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "MPA_FUSIONDETAILS_SOURCE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "MPA_FUSIONDETAILS_VUS",
+						"description": "SMALLINT",
+						"datatype": "SMALLINT",
+						"nullable": false,
+						"label": "MPA_FUSIONDETAILS_VUS",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_CASEINFO_ANALYSISMONTH",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(7)",
+						"nullable": false,
+						"label": "CALC_CASEINFO_ANALYSISMONTH",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_CASEINFO_HIGHEST_DRUG_LEVEL",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(2)",
+						"nullable": false,
+						"label": "CALC_CASEINFO_HIGHEST_DRUG_LEVEL",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_CASEINFO_HIGHEST_GENE_LEVEL",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(2)",
+						"nullable": false,
+						"label": "CALC_CASEINFO_HIGHEST_GENE_LEVEL",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_CASEINFO_REQUIRED_PANEL",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "CALC_CASEINFO_REQUIRED_PANEL",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_CASEINFO_POTENTIAL_PANEL",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "CALC_CASEINFO_POTENTIAL_PANEL",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_MPA_MUTATIONS_ALTERATION",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(40)",
+						"nullable": false,
+						"label": "CALC_MPA_MUTATIONS_ALTERATION",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_MPA_PANEL",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "CALC_MPA_PANEL",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_CASEINFO_ACTIONABLE",
+						"description": "INTEGER",
+						"datatype": "INTEGER",
+						"nullable": false,
+						"label": "CALC_CASEINFO_ACTIONABLE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					},
+					{
+						"name": "CALC_REPORT_RELEASE",
+						"description": "VARCHAR",
+						"datatype": "NVARCHAR(5)",
+						"nullable": false,
+						"label": "CALC_REPORT_RELEASE",
+						"usage": "attribute",
+						"regularAggregate": "countDistinct"
+					}]
+				}
+			},
+			"name": "AnalysisA",
+			"shaping": {
+				"embeddedModuleUpToDate": true
+			}
+		}]
+	},
+	"drillThrough": [],
+	"widgets": {
+		"model000001659748739a_00000003": {
+			"id": "model000001659748739a_00000003",
+			"data": {
+				"dataViews": [{
+					"modelRef": "model000001659747504d_00000002",
+					"dataItems": [{
+						"id": "model000001659748739a_00000000",
+						"itemId": "DIMENSION_ANALYSIS.ACCOUNTINFO_ACCOUNTIDKEY",
+						"itemLabel": "ACCOUNTINFO_ACCOUNTIDKEY"
+					}],
+					"id": "model000001659748739a_00000001"
+				}]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [{
+					"name": "values",
+					"dataItems": ["model000001659748739a_00000000"],
+					"dataItemSettings": [],
+					"caption": "Value",
+					"id": "values",
+					"layerId": "data"
+				}]
+			},
+			"type": "live",
+			"borderColor": "color5",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"visId": "summary"
+		},
+		"model000001659748f937_00000003": {
+			"id": "model000001659748f937_00000003",
+			"data": {
+				"dataViews": [{
+					"modelRef": "model000001659747504d_00000002",
+					"dataItems": [{
+						"id": "model000001659748f937_00000000",
+						"itemId": "DIMENSION_ANALYSIS.CASEINFO_CASEIDKEY",
+						"itemLabel": "CASEINFO_CASEIDKEY"
+					}],
+					"id": "model000001659748f937_00000001"
+				}]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [{
+					"name": "values",
+					"dataItems": ["model000001659748f937_00000000"],
+					"dataItemSettings": [],
+					"caption": "Value",
+					"id": "values",
+					"layerId": "data"
+				}]
+			},
+			"type": "live",
+			"borderColor": "color5",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"visId": "summary"
+		},
+		"model000001659749479a_00000003": {
+			"id": "model000001659749479a_00000003",
+			"data": {
+				"dataViews": [{
+					"modelRef": "model000001659747504d_00000002",
+					"dataItems": [{
+						"id": "model000001659749479a_00000000",
+						"itemId": "DIMENSION_ANALYSIS.CASEINFO_SAMPLENAME",
+						"itemLabel": "CASEINFO_SAMPLENAME"
+					}],
+					"id": "model000001659749479a_00000001"
+				}]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [{
+					"name": "values",
+					"dataItems": ["model000001659749479a_00000000"],
+					"dataItemSettings": [],
+					"caption": "Value",
+					"id": "values",
+					"layerId": "data"
+				}]
+			},
+			"type": "live",
+			"borderColor": "color5",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"visId": "summary"
+		},
+		"model00000165974998f5_00000000": {
+			"id": "model00000165974998f5_00000000",
+			"data": {
+				"dataViews": [{
+					"modelRef": "model000001659747504d_00000002",
+					"dataItems": [{
+						"id": "model000001659749d82f_00000001",
+						"itemId": "DIMENSION_ANALYSIS.CASEINFO_CANCERTYPE",
+						"itemLabel": "CASEINFO_CANCERTYPE"
+					}],
+					"id": "model000001659749d82f_00000000"
+				}]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [{
+					"name": "values",
+					"dataItems": ["model000001659749d82f_00000001"],
+					"dataItemSettings": [],
+					"caption": "Value",
+					"id": "values"
+				}]
+			},
+			"type": "live",
+			"borderColor": "color5",
+			"visId": "summary",
+			"name": {
+				"translationTable": {
+					
+				}
+			}
+		},
+		"model00000165974a42c6_00000000": {
+			"id": "model00000165974a42c6_00000000",
+			"data": {
+				"dataViews": [{
+					"modelRef": "model000001659747504d_00000002",
+					"dataItems": [{
+						"id": "model00000165974a5c21_00000002",
+						"itemId": "DIMENSION_ANALYSIS.CASEINFO_SAMPLEIDKEY",
+						"itemLabel": "CASEINFO_SAMPLEIDKEY"
+					},
+					{
+						"id": "model00000165974ace6e_00000001",
+						"itemId": "DIMENSION_ANALYSIS.CALC_CASEINFO_ANALYSISMONTH",
+						"itemLabel": "CALC_CASEINFO_ANALYSISMONTH"
+					},
+					{
+						"id": "model00000165974b7fe0_00000001",
+						"itemId": "DIMENSION_ANALYSIS.CALC_CASEINFO_ACTIONABLE",
+						"itemLabel": "CALC_CASEINFO_ACTIONABLE"
+					}],
+					"id": "model00000165974a5c21_00000001"
+				}]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [{
+					"name": "values",
+					"dataItems": ["model00000165974a5c21_00000002"],
+					"caption": "Length",
+					"id": "values"
+				},
+				{
+					"name": "categories",
+					"dataItems": ["model00000165974ace6e_00000001"],
+					"dataItemSettings": [],
+					"caption": "Bars",
+					"id": "categories"
+				},
+				{
+					"name": "color",
+					"dataItems": ["model00000165974b7fe0_00000001"],
+					"caption": "Color",
+					"id": "color"
+				}]
+			},
+			"type": "live",
+			"borderColor": "color5",
+			"visId": "com.ibm.vis.rave2bundlestackedcolumn",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"localFilters": []
+		}
+	}
+}

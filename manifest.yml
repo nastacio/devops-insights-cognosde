@@ -1,0 +1,8 @@
+---
+applications:
+- name: cognos-de
+  memory: 256M
+  host: ctgovdash
+  domain: mybluemix.net
+  services:
+  - aact.db

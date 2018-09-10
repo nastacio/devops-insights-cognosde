@@ -1,0 +1,904 @@
+{
+	"name": "New dashboard",
+	"layout": {
+		"id": "page0",
+		"items": [
+			{
+				"id": "page1",
+				"css": "templateBox aspectRatio_default",
+				"items": [
+					{
+						"id": "page2",
+						"style": {
+							"top": "0%",
+							"left": "0%",
+							"right": "0%",
+							"bottom": "0%"
+						},
+						"type": "templateDropZone"
+					},
+					{
+						"id": "model00000165c0d40896_00000001",
+						"from": "model00000165c0d23f21_00000001",
+						"style": {
+							"left": "66.54492330168006%",
+							"top": "0.13280212483399734%",
+							"height": "16.06905710491368%",
+							"width": "33.382030679327976%"
+						},
+						"type": "widget",
+						"relatedLayouts": ""
+					},
+					{
+						"id": "model00000165be847e1a_00000000",
+						"style": {
+							"left": "0.07304601899196493%",
+							"top": "0.13280212483399734%",
+							"height": "16.06905710491368%",
+							"width": "33.674214755295836%"
+						},
+						"type": "widget",
+						"relatedLayouts": "",
+						"clones": 1
+					},
+					{
+						"id": "model00000165c0d23f21_00000001",
+						"from": "model00000165be847e1a_00000000",
+						"style": {
+							"left": "33.7472607742878%",
+							"top": "0.13280212483399734%",
+							"height": "16.06905710491368%",
+							"width": "32.797662527392255%"
+						},
+						"type": "widget",
+						"relatedLayouts": "",
+						"clones": 1
+					},
+					{
+						"id": "model00000165c0d6a781_00000000",
+						"style": {
+							"left": "0.07304601899196493%",
+							"top": "16.201859229747676%",
+							"height": "44.09030544488712%",
+							"width": "33.674214755295836%"
+						},
+						"type": "widget",
+						"relatedLayouts": "",
+						"clones": 2
+					},
+					{
+						"id": "model00000165c0d92488_00000000",
+						"from": "model00000165c0d6a781_00000000",
+						"style": {
+							"left": "33.7472607742878%",
+							"top": "16.201859229747676%",
+							"height": "44.09030544488712%",
+							"width": "32.724616508400295%"
+						},
+						"type": "widget",
+						"relatedLayouts": ""
+					},
+					{
+						"id": "model00000165c0da358e_00000001",
+						"from": "model00000165c0d6a781_00000000",
+						"style": {
+							"left": "66.4718772826881%",
+							"top": "16.201859229747676%",
+							"height": "44.09030544488712%",
+							"width": "33.674214755295836%"
+						},
+						"type": "widget",
+						"relatedLayouts": "",
+						"clones": 1
+					},
+					{
+						"id": "model00000165c0e7db05_00000000",
+						"style": {
+							"left": "0.07304601899196493%",
+							"top": "60.2921646746348%",
+							"height": "39.44223107569721%",
+							"width": "100.07304601899196%"
+						},
+						"type": "widget",
+						"relatedLayouts": ""
+					}
+				],
+				"type": "scalingAbsolute"
+			}
+		],
+		"type": "container",
+		"templateName": "Template1"
+	},
+	"theme": "defaultTheme",
+	"version": 1008,
+	"eventGroups": [
+		{
+			"id": "page1:1",
+			"widgetIds": [
+				"model00000165be847e1a_00000000",
+				"model00000165c0d23f21_00000001",
+				"model00000165c0d40896_00000001",
+				"model00000165c0d6a781_00000000",
+				"model00000165c0d92488_00000000",
+				"model00000165c0da358e_00000001",
+				"model00000165c0e7db05_00000000"
+			]
+		}
+	],
+	"properties": {
+		"defaultLocale": "Default"
+	},
+	"dataSources": {
+		"version": "1.0",
+		"sources": [
+			{
+				"id": "model00000165be83f67f_00000001",
+				"assetId": "assetId00000165be83f67e_00000000",
+				"clientId": "ctgov-v.0.0.1",
+				"module": {
+					"xsd": "https://ibm.com/daas/module/1.0/module.xsd",
+					"label": "Analysis Module",
+					"identifier": "ctgov-v.0.0.1",
+					"source": {
+						"id": "StringID",
+						"user": "%%DASH_DB_USER%%",
+						"password": "%%DASH_DB_PASSWORD%%",
+						"jdbc": {
+							"jdbcUrl": "%%DASH_DB_JDBC_URL%%",
+							"driverClassName": "com.ibm.db2.jcc.DB2Driver",
+							"connectionProperties": ""
+						}
+					},
+					"table": {
+						"name": "CTGOV",
+						"description": "Summarization of data for clinicaltrials.gov",
+						"column": [
+							{
+								"name": "NCT_ID",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(10)",
+								"nullable": false,
+								"label": "clinical trial",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "OVERALL_STATUS",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(64)",
+								"nullable": false,
+								"label": "Status",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "PHASE",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(64)",
+								"nullable": false,
+								"label": "Phase",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "START_DATE",
+								"description": "DATE",
+								"datatype": "DATE",
+								"nullable": false,
+								"label": "start date",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "STUDY_FIRST_SUBMITTED_DATE",
+								"description": "DATE",
+								"datatype": "DATE",
+								"nullable": false,
+								"label": "first submitted date",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "STUDY_TYPE",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(64)",
+								"nullable": false,
+								"label": "study type",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "NUMBER_OF_ARMS",
+								"description": "INTEGER",
+								"datatype": "INTEGER",
+								"nullable": false,
+								"label": "number of arms",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "NUMBER_OF_GROUPS",
+								"description": "INTEGER",
+								"datatype": "INTEGER",
+								"nullable": false,
+								"label": "number of groups",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "SOURCE",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(256)",
+								"nullable": false,
+								"label": "source",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "ENROLLMENT",
+								"description": "VARCHAR",
+								"datatype": "INTEGER",
+								"nullable": false,
+								"label": "enrollment",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "ENROLLMENT_TYPE",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(16)",
+								"nullable": false,
+								"label": "enrollment type",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "NUMBER_OF_FACILITIES",
+								"description": "INTEGER",
+								"datatype": "INTEGER",
+								"nullable": false,
+								"label": "number of facilities",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "HAS_US_FACILITY",
+								"description": "CHAR",
+								"datatype": "CHAR(1)",
+								"nullable": false,
+								"label": "has US facility",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "HAS_SINGLE_FACILITY",
+								"description": "CHAR",
+								"datatype": "CHAR(1)",
+								"nullable": false,
+								"label": "has single facility",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "CONDITION",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(256)",
+								"nullable": false,
+								"label": "condition",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "CONDITION_ONCO",
+								"description": "CHAR",
+								"datatype": "CHAR(2)",
+								"nullable": false,
+								"label": "oncology",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "INTERVENTION_TYPE",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(32)",
+								"nullable": false,
+								"label": "intervention type",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							},
+							{
+								"name": "INTERVENTION_NAME",
+								"description": "VARCHAR",
+								"datatype": "NVARCHAR(256)",
+								"nullable": false,
+								"label": "intervention name",
+								"usage": "attribute",
+								"regularAggregate": "countDistinct"
+							}
+						]
+					}
+				},
+				"name": "Analysis Module",
+				"shaping": {
+					"shapingId": "shaping00000165c0f294c5_00000000",
+					"embeddedModuleUpToDate": false,
+					"moserJSON": {
+						"version": "5.0",
+						"container": "C",
+						"useSpec": [
+							{
+								"identifier": "ES",
+								"type": "url",
+								"storeID": "baseModule",
+								"imports": "*"
+							}
+						],
+						"expressionLocale": "en-us",
+						"querySubject": [
+							{
+								"ref": [
+									"ES.CTGOV"
+								],
+								"instanceType": "reference",
+								"item": [
+									{
+										"queryItem": {
+											"usage": "fact",
+											"regularAggregate": "total",
+											"identifier": "ENROLLMENT",
+											"property": [
+												{
+													"name": "propertySetByUser_170",
+													"value": "true"
+												},
+												{
+													"name": "propertySetByUser_165",
+													"value": "true"
+												}
+											]
+										}
+									}
+								],
+								"identifier": "CTGOV"
+							}
+						],
+						"calculation": [
+							{
+								"expression": "_year( CTGOV.START_DATE )",
+								"usage": "attribute",
+								"datatype": "INTEGER",
+								"nullable": true,
+								"regularAggregate": "minimum",
+								"datatypeCategory": "number",
+								"highlevelDatatype": "integer",
+								"facetDefinition": {
+									"enabled": "automatic"
+								},
+								"identifier": "start_year",
+								"label": "start year",
+								"property": [
+									{
+										"name": "ui_expr",
+										"value": "{\"func\":\"customCalculation\",\"version\":\"5.0\"}"
+									}
+								],
+								"propertyOverride": [
+									"NEW"
+								]
+							}
+						],
+						"metadataTreeView": [
+							{
+								"folderItem": [
+									{
+										"ref": "start_year"
+									}
+								]
+							}
+						],
+						"dataRetrievalMode": "liveConnection",
+						"identifier": "newModel",
+						"label": "newModel"
+					}
+				}
+			}
+		]
+	},
+	"pageContext": [
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"conditions": [
+				{
+					"from": [
+						"2007-01-01"
+					],
+					"to": [
+						"2100-01-31"
+					],
+					"attributeUniqueNames": [
+						"CTGOV.START_DATE"
+					]
+				}
+			],
+			"scope": "global",
+			"hierarchyNames": [
+				"start date"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.START_DATE"
+			],
+			"isNamedSet": false
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"study type"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.STUDY_TYPE"
+			],
+			"isNamedSet": false
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"condition"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.CONDITION"
+			],
+			"isNamedSet": false
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"oncology"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.CONDITION_ONCO"
+			],
+			"exclude": false,
+			"isNamedSet": false,
+			"tupleSet": "{\"CTGOV.CONDITION_ONCO->[t ]\":{\"u\":\"CTGOV.CONDITION_ONCO->[t ]\",\"d\":\"t \"}}"
+		}
+	],
+	"drillThrough": [],
+	"widgets": {
+		"model00000165be847e1a_00000000": {
+			"id": "model00000165be847e1a_00000000",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165be84e127_00000000",
+								"itemId": "CTGOV.NCT_ID",
+								"itemLabel": "clinical trial"
+							}
+						],
+						"id": "model00000165be84e126_00000000"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "values",
+						"dataItems": [
+							"model00000165be84e127_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "Value",
+						"id": "values"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "summary",
+			"name": {
+				"translationTable": {
+					
+				}
+			}
+		},
+		"model00000165c0d23f21_00000001": {
+			"id": "model00000165c0d23f21_00000001",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165c0d33a79_00000000",
+								"itemId": "CTGOV.CONDITION",
+								"itemLabel": "condition"
+							}
+						],
+						"id": "model00000165be84e126_00000000"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "values",
+						"dataItems": [
+							"model00000165c0d33a79_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "Value",
+						"id": "values",
+						"layerId": "data"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "summary",
+			"name": {
+				"translationTable": {
+					
+				}
+			}
+		},
+		"model00000165c0d40896_00000001": {
+			"id": "model00000165c0d40896_00000001",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165c0d54b95_00000000",
+								"itemId": "CTGOV.SOURCE",
+								"itemLabel": "source"
+							}
+						],
+						"id": "model00000165be84e126_00000000"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "values",
+						"dataItems": [
+							"model00000165c0d54b95_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "Value",
+						"id": "values",
+						"layerId": "data"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "summary",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"localFilters": []
+		},
+		"model00000165c0d6a781_00000000": {
+			"id": "model00000165c0d6a781_00000000",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165c0d700bf_00000000",
+								"itemId": "CTGOV.NCT_ID",
+								"itemLabel": "clinical trial",
+								"selection": [],
+								"aggregate": "countdistinct"
+							},
+							{
+								"id": "model00000165c0d9cb4d_00000000",
+								"itemId": "CTGOV.OVERALL_STATUS",
+								"itemLabel": "Status"
+							},
+							{
+								"id": "model00000165c0e2e365_00000000",
+								"itemId": "CTGOV.STUDY_TYPE",
+								"itemLabel": "study type"
+							}
+						],
+						"id": "model00000165c0d6e807_00000001"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "categories",
+						"dataItems": [
+							"model00000165c0d9cb4d_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "Bars",
+						"id": "categories"
+					},
+					{
+						"name": "values",
+						"dataItems": [
+							"model00000165c0d700bf_00000000"
+						],
+						"caption": "Length",
+						"id": "values"
+					},
+					{
+						"name": "color",
+						"dataItems": [
+							"model00000165c0e2e365_00000000"
+						],
+						"caption": "Color",
+						"id": "color"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "com.ibm.vis.rave2bundlestackedbar",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"localFilters": []
+		},
+		"model00000165c0d92488_00000000": {
+			"id": "model00000165c0d92488_00000000",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165c0d6e808_00000000",
+								"itemId": "CTGOV.CONDITION",
+								"itemLabel": "condition",
+								"selection": []
+							},
+							{
+								"id": "model00000165c0d700bf_00000000",
+								"itemId": "CTGOV.NCT_ID",
+								"itemLabel": "clinical trial",
+								"selection": [
+									{
+										"operation": "keep",
+										"topBottom": {
+											"type": "topcount",
+											"value": 10
+										}
+									},
+									{
+										"operation": "order",
+										"sort": {
+											"type": "desc",
+											"priority": 1,
+											"by": "caption"
+										}
+									}
+								],
+								"aggregate": "countdistinct"
+							}
+						],
+						"id": "model00000165c0d6e807_00000001"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "categories",
+						"dataItems": [
+							"model00000165c0d6e808_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "Bars",
+						"id": "categories"
+					},
+					{
+						"name": "values",
+						"dataItems": [
+							"model00000165c0d700bf_00000000"
+						],
+						"caption": "Length",
+						"id": "values"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "com.ibm.vis.rave2bundlestackedbar",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"localFilters": []
+		},
+		"model00000165c0da358e_00000001": {
+			"id": "model00000165c0da358e_00000001",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165c0d700bf_00000000",
+								"itemId": "CTGOV.NCT_ID",
+								"itemLabel": "clinical trial",
+								"selection": [
+									{
+										"operation": "keep",
+										"topBottom": {
+											"type": "topcount",
+											"value": 10
+										}
+									}
+								],
+								"aggregate": "countdistinct"
+							},
+							{
+								"id": "model00000165c0e56872_00000000",
+								"itemId": "CTGOV.PHASE",
+								"itemLabel": "Phase"
+							}
+						],
+						"id": "model00000165c0d6e807_00000001"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "categories",
+						"dataItems": [
+							"model00000165c0e56872_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "Bars",
+						"id": "categories"
+					},
+					{
+						"name": "values",
+						"dataItems": [
+							"model00000165c0d700bf_00000000"
+						],
+						"caption": "Length",
+						"id": "values"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "com.ibm.vis.rave2bundlestackedbar",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"localFilters": []
+		},
+		"model00000165c0e7db05_00000000": {
+			"id": "model00000165c0e7db05_00000000",
+			"data": {
+				"dataViews": [
+					{
+						"modelRef": "model00000165be83f67f_00000001",
+						"dataItems": [
+							{
+								"id": "model00000165c0e81f4e_00000000",
+								"itemId": "CTGOV.NCT_ID",
+								"itemLabel": "clinical trial",
+								"aggregate": "countdistinct"
+							},
+							{
+								"id": "model00000165c0e9927d_00000000",
+								"itemId": "start_year",
+								"itemLabel": "start year"
+							},
+							{
+								"id": "model00000165c0e9ec70_00000000",
+								"itemId": "CTGOV.ENROLLMENT",
+								"itemLabel": "enrollment"
+							},
+							{
+								"id": "model00000165c0ec516b_00000000",
+								"itemId": "CTGOV.ENROLLMENT_TYPE",
+								"itemLabel": "enrollment type"
+							}
+						],
+						"id": "model00000165c0e8052a_00000000"
+					}
+				]
+			},
+			"visTypeLocked": true,
+			"slotmapping": {
+				"slots": [
+					{
+						"name": "categories",
+						"dataItems": [
+							"model00000165c0e9927d_00000000"
+						],
+						"dataItemSettings": [],
+						"caption": "x-axis",
+						"id": "categories"
+					},
+					{
+						"name": "columnValue",
+						"dataItems": [
+							"model00000165c0e81f4e_00000000"
+						],
+						"caption": "Length",
+						"id": "columnValue"
+					},
+					{
+						"name": "lineValue",
+						"dataItems": [
+							"model00000165c0e9ec70_00000000"
+						],
+						"caption": "Line position",
+						"id": "lineValue"
+					},
+					{
+						"name": "repeatHorizontal",
+						"dataItems": [
+							"model00000165c0ec516b_00000000"
+						],
+						"caption": "Repeat (column)",
+						"id": "repeatHorizontal"
+					}
+				]
+			},
+			"type": "live",
+			"visId": "com.ibm.vis.rave2bundlecomposite",
+			"name": {
+				"translationTable": {
+					
+				}
+			},
+			"localFilters": [
+				{
+					"id": "CTGOV.ENROLLMENT_TYPE",
+					"columnId": "CTGOV.ENROLLMENT_TYPE",
+					"values": [
+						{
+							"d": "Actual",
+							"u": "CTGOV.ENROLLMENT_TYPE->[Actual]"
+						},
+						{
+							"d": "Anticipated",
+							"u": "CTGOV.ENROLLMENT_TYPE->[Anticipated]"
+						}
+					],
+					"excludedValues": [],
+					"operator": "in",
+					"type": null
+				}
+			]
+		}
+	}
+}
