@@ -1,15 +1,19 @@
-/********************************************************* {COPYRIGHT-TOP} ***
- * IBM Confidential
- * OCO Source Materials
- * WGA
- *
- * (C) Copyright IBM Corp. 2016  All Rights Reserved.
- *
- * The source code for this program is not published or otherwise  
- * divested of its trade secrets, irrespective of what has been 
- * deposited with the U.S. Copyright Office.
- ********************************************************* {COPYRIGHT-END} **/
-package com.ibm.biospace.paas;
+/********************************************************* {COPYRIGHT-TOP} ****
+*  Copyright 2018 Denilson Nastacio
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+***************************************************************************** {COPYRIGHT-END} **/
+package nastacio.cognosde.paas;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -26,7 +30,8 @@ import javax.json.JsonReader;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ibm.biospace.cognos.exceptions.CognosException;
+
+import nastacio.cognosde.exceptions.CognosException;
 
 /**
  * Contains all runtime properties stored in the PaaS subsystem in association

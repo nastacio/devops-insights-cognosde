@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <jsp:useBean scope="session" id="cognos"
-	class="com.ibm.biospace.cognos.embedded.CognosEmbeddedUtil" />
+	class="nastacio.cognosde.util.CognosEmbeddedUtil" />
 
 <html>
 <head>
@@ -18,42 +18,24 @@
 			sessionCode : '${cognos.sessionCode}',
 			node : document.getElementById('containerDivId')
 		});
+
 		window.api.initialize().then(function() {
 			console.log('API created successfully.');
 
- 		window.api.dashboard.openDashboard({
-		    dashboardSpec: ${cognos.dashboardSpec}
-		}).then(
-		    function(dashboardAPI) {
-		        console.log('Dashboard created successfully.');
-		        window.dashboardAPI = dashboardAPI;
-                dashboardAPI.setMode(dashboardAPI.MODES.EDIT);
-		    }
-		).catch(
-		    function(err) {
-		        console.log(err);
-		    }
-		);
-
-/* 			window.api.dashboard.createNew().then(
+	 		window.api.dashboard.openDashboard({
+			    dashboardSpec: ${cognos.dashboardSpec}
+			}).then(
 			    function(dashboardAPI) {
-                    console.log('Dashboard created successfully.');
-                    window.dashboardAPI = dashboardAPI;
-                    dashboardAPI.addSources([ {
-                        module : ${cognos.dashboardSpec},
-                        name : 'AnalysisA',
-                        id : 'analysis-v.1.0.0a'
-                    } ]);
-                    console.log('Datasource added.');
+			        console.log('Dashboard created successfully.');
+			        window.dashboardAPI = dashboardAPI;
+	                dashboardAPI.setMode(dashboardAPI.MODES.EDIT);
 			    }
 			).catch(
 			    function(err) {
-			        console.log('User hit cancel on the template picker page.');
+			        console.log(err);
 			    }
 			);
- */
- 
- 
+
 		}, function(err) {
 			console.log('Failed to create API. ' + err.message);
 		});

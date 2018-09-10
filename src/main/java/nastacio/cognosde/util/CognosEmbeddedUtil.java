@@ -1,15 +1,19 @@
-/********************************************************* {COPYRIGHT-TOP} ***
-* IBM Confidential
-* OCO Source Materials
-* WfG
+/********************************************************* {COPYRIGHT-TOP} ****
+*  Copyright 2018 Denilson Nastacio
 *
-* (C) Copyright IBM Corp. 2018  All Rights Reserved.
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
 *
-* The source code for this program is not published or otherwise  
-* divested of its trade secrets, irrespective of what has been 
-* deposited with the U.S. Copyright Office.
- ********************************************************* {COPYRIGHT-END} **/
-package com.ibm.biospace.cognos.embedded;
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+***************************************************************************** {COPYRIGHT-END} **/
+package nastacio.cognosde.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,10 +38,11 @@ import javax.crypto.Cipher;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ibm.biospace.cognos.exceptions.CognosException;
-import com.ibm.biospace.paas.CognosEmbeddedService;
-import com.ibm.biospace.paas.DashDBCredentials;
-import com.ibm.biospace.paas.PaasProperties;
+
+import nastacio.cognosde.exceptions.CognosException;
+import nastacio.cognosde.paas.CognosEmbeddedService;
+import nastacio.cognosde.paas.DashDBCredentials;
+import nastacio.cognosde.paas.PaasProperties;
 
 /**
  * 
@@ -76,20 +81,6 @@ public class CognosEmbeddedUtil {
         return result;
     }
     
-	public String getTableSchema() {
-		String result = null;
-		TableModel tm = new TableModel();
-		try {
-			result = tm.getSchema();
-		} catch (CognosException e) {
-			logger.severe(e.getMessage());
-			result = "";
-		}
-		return result;
-	}
-
-    
-
     /**
      * 
      * @return

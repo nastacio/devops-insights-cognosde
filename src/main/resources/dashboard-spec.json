@@ -82,10 +82,10 @@
 						"id": "model00000165c0da358e_00000001",
 						"from": "model00000165c0d6a781_00000000",
 						"style": {
-							"left": "66.4718772826881%",
+							"left": "66.54492330168006%",
 							"top": "16.201859229747676%",
 							"height": "44.09030544488712%",
-							"width": "33.674214755295836%"
+							"width": "33.382030679327976%"
 						},
 						"type": "widget",
 						"relatedLayouts": "",
@@ -94,10 +94,10 @@
 					{
 						"id": "model00000165c0e7db05_00000000",
 						"style": {
-							"left": "0.07304601899196493%",
-							"top": "60.2921646746348%",
-							"height": "39.44223107569721%",
-							"width": "100.07304601899196%"
+							"left": "0.06666666666666667%",
+							"top": "60.24242424242424%",
+							"height": "39.63636363636363%",
+							"width": "99.86666666666666%"
 						},
 						"type": "widget",
 						"relatedLayouts": ""
@@ -158,7 +158,7 @@
 								"description": "VARCHAR",
 								"datatype": "NVARCHAR(10)",
 								"nullable": false,
-								"label": "clinical trial",
+								"label": "study",
 								"usage": "attribute",
 								"regularAggregate": "countDistinct"
 							},
@@ -167,7 +167,7 @@
 								"description": "VARCHAR",
 								"datatype": "NVARCHAR(64)",
 								"nullable": false,
-								"label": "Status",
+								"label": "status",
 								"usage": "attribute",
 								"regularAggregate": "countDistinct"
 							},
@@ -176,7 +176,7 @@
 								"description": "VARCHAR",
 								"datatype": "NVARCHAR(64)",
 								"nullable": false,
-								"label": "Phase",
+								"label": "phase",
 								"usage": "attribute",
 								"regularAggregate": "countDistinct"
 							},
@@ -410,13 +410,27 @@
 			"table": "",
 			"alias": "0",
 			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"study"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.NCT_ID"
+			],
+			"isNamedSet": false
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
 			"conditions": [
 				{
 					"from": [
 						"2007-01-01"
 					],
 					"to": [
-						"2100-01-31"
+						"2019-01-01"
 					],
 					"attributeUniqueNames": [
 						"CTGOV.START_DATE"
@@ -475,6 +489,48 @@
 			"exclude": false,
 			"isNamedSet": false,
 			"tupleSet": "{\"CTGOV.CONDITION_ONCO->[t ]\":{\"u\":\"CTGOV.CONDITION_ONCO->[t ]\",\"d\":\"t \"}}"
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"has US facility"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.HAS_US_FACILITY"
+			],
+			"isNamedSet": false
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"has single facility"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.HAS_SINGLE_FACILITY"
+			],
+			"isNamedSet": false
+		},
+		{
+			"origin": "filter",
+			"table": "",
+			"alias": "0",
+			"sourceId": "model00000165be83f67f_00000001",
+			"scope": "global",
+			"hierarchyNames": [
+				"source"
+			],
+			"hierarchyUniqueNames": [
+				"CTGOV.SOURCE"
+			],
+			"isNamedSet": false
 		}
 	],
 	"drillThrough": [],
@@ -489,7 +545,7 @@
 							{
 								"id": "model00000165be84e127_00000000",
 								"itemId": "CTGOV.NCT_ID",
-								"itemLabel": "clinical trial"
+								"itemLabel": "study"
 							}
 						],
 						"id": "model00000165be84e126_00000000"
@@ -511,6 +567,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "summary",
 			"name": {
 				"translationTable": {
@@ -551,6 +608,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "summary",
 			"name": {
 				"translationTable": {
@@ -591,6 +649,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "summary",
 			"name": {
 				"translationTable": {
@@ -609,7 +668,7 @@
 							{
 								"id": "model00000165c0d700bf_00000000",
 								"itemId": "CTGOV.NCT_ID",
-								"itemLabel": "clinical trial",
+								"itemLabel": "study",
 								"selection": [],
 								"aggregate": "countdistinct"
 							},
@@ -659,6 +718,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "com.ibm.vis.rave2bundlestackedbar",
 			"name": {
 				"translationTable": {
@@ -683,7 +743,7 @@
 							{
 								"id": "model00000165c0d700bf_00000000",
 								"itemId": "CTGOV.NCT_ID",
-								"itemLabel": "clinical trial",
+								"itemLabel": "study",
 								"selection": [
 									{
 										"operation": "keep",
@@ -731,6 +791,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "com.ibm.vis.rave2bundlestackedbar",
 			"name": {
 				"translationTable": {
@@ -749,7 +810,7 @@
 							{
 								"id": "model00000165c0d700bf_00000000",
 								"itemId": "CTGOV.NCT_ID",
-								"itemLabel": "clinical trial",
+								"itemLabel": "study",
 								"selection": [
 									{
 										"operation": "keep",
@@ -794,6 +855,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "com.ibm.vis.rave2bundlestackedbar",
 			"name": {
 				"translationTable": {
@@ -812,7 +874,7 @@
 							{
 								"id": "model00000165c0e81f4e_00000000",
 								"itemId": "CTGOV.NCT_ID",
-								"itemLabel": "clinical trial",
+								"itemLabel": "study",
 								"aggregate": "countdistinct"
 							},
 							{
@@ -823,7 +885,8 @@
 							{
 								"id": "model00000165c0e9ec70_00000000",
 								"itemId": "CTGOV.ENROLLMENT",
-								"itemLabel": "enrollment"
+								"itemLabel": "enrollment",
+								"aggregate": "avg"
 							},
 							{
 								"id": "model00000165c0ec516b_00000000",
@@ -874,6 +937,7 @@
 				]
 			},
 			"type": "live",
+			"borderColor": "color5",
 			"visId": "com.ibm.vis.rave2bundlecomposite",
 			"name": {
 				"translationTable": {

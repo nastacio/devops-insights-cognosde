@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <jsp:useBean scope="session" id="cognos"
-	class="com.ibm.biospace.cognos.embedded.CognosEmbeddedUtil" />
+	class="nastacio.cognosde.util.CognosEmbeddedUtil" />
 
 <html>
 <head>
@@ -12,14 +12,15 @@
 <script src="https://dde-us-south.analytics.ibm.com/daas/CognosApi.js"></script>
 
 <script>
-	function init() {
-/* 		window.api = new CognosApi({
-			cognosRootURL : 'https://dde-us-south.analytics.ibm.com/daas/',
-			sessionCode : '${cognos.sessionCode}',
-			node : document.getElementById('containerDivId')
-		});
-		window.api.initialize().then(function() {
-			console.log('API created successfully.');
+function init() {
+	window.api = new CognosApi({
+		cognosRootURL : 'https://dde-us-south.analytics.ibm.com/daas/',
+		sessionCode : '${cognos.sessionCode}',
+		node : document.getElementById('containerDivId')
+	});
+
+	window.api.initialize().then(function() {
+		console.log('API created successfully.');
 
  		window.api.dashboard.openDashboard({
 		    dashboardSpec: ${cognos.dashboardSpec}
@@ -33,43 +34,24 @@
 		        console.log(err);
 		    }
 		);
- */
-/* 			window.api.dashboard.createNew().then(
-			    function(dashboardAPI) {
-                    console.log('Dashboard created successfully.');
-                    window.dashboardAPI = dashboardAPI;
-                    dashboardAPI.addSources([ {
-                        module : ${cognos.dashboardSpec},
-                        name : 'AnalysisA',
-                        id : 'analysis-v.1.0.0a'
-                    } ]);
-                    console.log('Datasource added.');
-			    }
-			).catch(
-			    function(err) {
-			        console.log('User hit cancel on the template picker page.');
-			    }
-			);
- */
- 
- 
-		}, function(err) {
-			console.log('Failed to create API. ' + err.message);
-		});
 
-		window.onError = function(event) {
-			console.log('onError:' + JSON.stringify(event));
-		};
-		// window.api.on(CognosApi.EVENTS.REQUEST_ERROR, window.onError);
-	}
+	}, function(err) {
+		console.log('Failed to create API. ' + err.message);
+	});
+
+	window.onError = function(event) {
+		console.log('onError:' + JSON.stringify(event));
+	};
+	// window.api.on(CognosApi.EVENTS.REQUEST_ERROR, window.onError);
+}
 </script>
 
 <style>
 html {
-  height: 100%;
+  height: 97vh;
 }
 body {
-    min-height: calc(100% - 0);
+    height: 97vh;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 14px;
 }
@@ -145,11 +127,10 @@ option:disabled {
 }
 
 .iframeContainer {  
-	min-height: calc(100vh-14px);
+	height: 97vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	background: yellow;
 }
 
 .iframeContainer pre {
