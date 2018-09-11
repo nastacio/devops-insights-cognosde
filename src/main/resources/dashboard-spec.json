@@ -73,7 +73,7 @@
 							"left": "33.7472607742878%",
 							"top": "16.201859229747676%",
 							"height": "44.09030544488712%",
-							"width": "32.724616508400295%"
+							"width": "32.797662527392255%"
 						},
 						"type": "widget",
 						"relatedLayouts": ""
@@ -569,11 +569,26 @@
 			"type": "live",
 			"borderColor": "color5",
 			"visId": "summary",
+			"properties": [
+				{
+					"id": "showItemLabel",
+					"value": false
+				},
+				{
+					"id": "valueColor",
+					"value": 0
+				},
+				{
+					"id": "widget.legend.position",
+					"value": "right"
+				}
+			],
 			"name": {
 				"translationTable": {
-					
+					"Default": "Studies"
 				}
-			}
+			},
+			"showTitle": true
 		},
 		"model00000165c0d23f21_00000001": {
 			"id": "model00000165c0d23f21_00000001",
@@ -610,11 +625,26 @@
 			"type": "live",
 			"borderColor": "color5",
 			"visId": "summary",
+			"properties": [
+				{
+					"id": "showItemLabel",
+					"value": false
+				},
+				{
+					"id": "valueColor",
+					"value": 0
+				},
+				{
+					"id": "widget.legend.position",
+					"value": "right"
+				}
+			],
 			"name": {
 				"translationTable": {
-					
+					"Default": "Conditions"
 				}
-			}
+			},
+			"showTitle": true
 		},
 		"model00000165c0d40896_00000001": {
 			"id": "model00000165c0d40896_00000001",
@@ -651,11 +681,26 @@
 			"type": "live",
 			"borderColor": "color5",
 			"visId": "summary",
+			"properties": [
+				{
+					"id": "showItemLabel",
+					"value": false
+				},
+				{
+					"id": "valueColor",
+					"value": 0
+				},
+				{
+					"id": "widget.legend.position",
+					"value": "right"
+				}
+			],
 			"name": {
 				"translationTable": {
-					
+					"Default": "Sponsors"
 				}
 			},
+			"showTitle": true,
 			"localFilters": []
 		},
 		"model00000165c0d6a781_00000000": {
@@ -722,9 +767,10 @@
 			"visId": "com.ibm.vis.rave2bundlestackedbar",
 			"name": {
 				"translationTable": {
-					
+					"Default": "Studies by Type"
 				}
 			},
+			"showTitle": true,
 			"localFilters": []
 		},
 		"model00000165c0d92488_00000000": {
@@ -795,9 +841,10 @@
 			"visId": "com.ibm.vis.rave2bundlestackedbar",
 			"name": {
 				"translationTable": {
-					
+					"Default": "Studies by Condition (Top-10)"
 				}
 			},
+			"showTitle": true,
 			"localFilters": []
 		},
 		"model00000165c0da358e_00000001": {
@@ -859,9 +906,10 @@
 			"visId": "com.ibm.vis.rave2bundlestackedbar",
 			"name": {
 				"translationTable": {
-					
+					"Default": "Studies by Phase"
 				}
 			},
+			"showTitle": true,
 			"localFilters": []
 		},
 		"model00000165c0e7db05_00000000": {
@@ -941,9 +989,10 @@
 			"visId": "com.ibm.vis.rave2bundlecomposite",
 			"name": {
 				"translationTable": {
-					
+					"Default": "Studies and Enrollment Averages Over Time"
 				}
 			},
+			"showTitle": true,
 			"localFilters": [
 				{
 					"id": "CTGOV.ENROLLMENT_TYPE",
