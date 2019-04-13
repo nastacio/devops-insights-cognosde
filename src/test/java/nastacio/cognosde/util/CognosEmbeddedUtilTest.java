@@ -17,15 +17,10 @@ package nastacio.cognosde.util;
 
 import java.io.InputStream;
 
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
+
 import org.junit.Test;
-
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import nastacio.cognosde.util.CognosEmbeddedSession;
-import nastacio.cognosde.util.CognosEmbeddedUtil;
-import nastacio.cognosde.util.SessionKey;
 
 /**
  * 
@@ -37,10 +32,8 @@ public class CognosEmbeddedUtilTest extends CognosEmbeddedUtil {
     @Test
     public void testSessionEncrypt() throws Exception {
         try (InputStream is = this.getClass().getClassLoader().getResourceAsStream("session-context.json")) {
-            ObjectMapper o = new ObjectMapper();
-            o.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-            JsonParser jp = o.getFactory().createParser(is);
-            CognosEmbeddedSession r = jp.readValueAs(CognosEmbeddedSession.class);
+	        Jsonb jsonb = JsonbBuilder.create();
+            CognosEmbeddedSession r = jsonb.fromJson(is, CognosEmbeddedSession.class);
             CognosEmbeddedUtil ceu = new CognosEmbeddedUtil();
             SessionKey sessionKey = r.getKeys().get(0);
             String result = ceu.sessionEncrypt("aaaaaaaaaa", sessionKey);

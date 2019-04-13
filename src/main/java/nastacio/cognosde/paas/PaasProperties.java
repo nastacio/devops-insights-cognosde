@@ -26,10 +26,8 @@ import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
-
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
 
 import nastacio.cognosde.exceptions.CognosException;
 
@@ -136,11 +134,9 @@ public class PaasProperties {
 
         StringReader jsonIoReader = new StringReader(vcapServices);
         try (JsonReader jsonReader = Json.createReader(jsonIoReader)) {
-            ObjectMapper o = new ObjectMapper();
-            o.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             vcapServicesJsonObject = jsonReader.readObject();
-            dashService = readPaaSDashServiceProperties(o);
-            cognosService = readPaaSCognosServiceProperties(o);
+            dashService = readPaaSDashServiceProperties();
+            cognosService = readPaaSCognosServiceProperties();
 
         } catch (IOException e) {
             String errMsg = MessageFormat.format("Unable to read environment properties: {0}", e.getMessage());
@@ -149,11 +145,12 @@ public class PaasProperties {
     }
 
     /**
-     * @param o
+     * 
+     * @return
      * @throws CognosException
      * @throws IOException
      */
-    private DashDBService readPaaSDashServiceProperties(ObjectMapper o) throws CognosException, IOException {
+    private DashDBService readPaaSDashServiceProperties() throws CognosException, IOException {
         final String dashDBServicesLabel = "dashDB";
         JsonArray dashDBServicesJson = vcapServicesJsonObject.getJsonArray(dashDBServicesLabel);
         if (dashDBServicesJson == null) {
@@ -162,8 +159,8 @@ public class PaasProperties {
             throw new CognosException(errMsg);
         }
 
-        JsonParser jp = o.getFactory().createParser(dashDBServicesJson.toString());
-        DashDBService[] dashServices = jp.readValueAs(DashDBService[].class);
+        Jsonb jsonb = JsonbBuilder.create();
+        DashDBService[] dashServices = jsonb.fromJson(dashDBServicesJson.toString(), DashDBService[].class);
         if (dashServices.length == 0) {
             String errMsg = MessageFormat.format("No service definitions in group {0}.", dashDBServicesLabel);
             throw new CognosException(errMsg);
@@ -172,12 +169,12 @@ public class PaasProperties {
     }
 
     /**
-     * @param o
+     * 
      * @return
      * @throws CognosException
      * @throws IOException
      */
-    private CognosEmbeddedService readPaaSCognosServiceProperties(ObjectMapper o)
+    private CognosEmbeddedService readPaaSCognosServiceProperties()
             throws CognosException, IOException {
         final String cognosServicesLabel = "dynamic-dashboard-embedded";
         JsonArray cognosServicesJson = vcapServicesJsonObject.getJsonArray(cognosServicesLabel);
@@ -186,8 +183,8 @@ public class PaasProperties {
                     cognosServicesLabel, vcapServicesJsonObject.keySet().stream().collect(Collectors.joining(",")));
             throw new CognosException(errMsg);
         }
-        JsonParser jp = o.getFactory().createParser(cognosServicesJson.toString());
-        CognosEmbeddedService[] cognosServices = jp.readValueAs(CognosEmbeddedService[].class);
+        Jsonb jsonb = JsonbBuilder.create();
+        CognosEmbeddedService[] cognosServices = jsonb.fromJson(cognosServicesJson.toString(), CognosEmbeddedService[].class);
         if (cognosServices.length == 0) {
             String errMsg = MessageFormat.format("No service definitions in group {0}.", cognosServicesLabel);
             throw new CognosException(errMsg);
