@@ -29,8 +29,11 @@ import java.security.KeyFactory;
 import java.security.PublicKey;
 import java.security.spec.RSAPublicKeySpec;
 import java.text.MessageFormat;
+import java.text.SimpleDateFormat;
 import java.util.Base64;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
@@ -92,19 +95,25 @@ public class CognosEmbeddedUtil {
 				BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
 
 			final DashDBCredentials dashCredentials = PaasProperties.getInstance().getDashService().credentials;
-			SessionKey sessionLey = cachedSession.getKeys().get(0);
+			SessionKey sessionKey = cachedSession.getKeys().get(0);
 
 			String line = null;
 			while ((line = br.readLine()) != null) {
 				if (line.contains("%%DASH_DB_USER%%")) {
-					String encryptedUsername = sessionEncrypt(dashCredentials.username, sessionLey);
+					String encryptedUsername = sessionEncrypt(dashCredentials.username, sessionKey);
 					line = line.replace("%%DASH_DB_USER%%", encryptedUsername);
 				} else if (line.contains("%%DASH_DB_PASSWORD%%")) {
-					String encryptedPassword = sessionEncrypt(dashCredentials.password, sessionLey);
+					String encryptedPassword = sessionEncrypt(dashCredentials.password, sessionKey);
 					line = line.replace("%%DASH_DB_PASSWORD%%", encryptedPassword);
 				} else if (line.contains("%%DASH_DB_JDBC_URL%%")) {
-					String encryptedJdbcUrl = sessionEncrypt(dashCredentials.jdbcurl, sessionLey);
+					String encryptedJdbcUrl = sessionEncrypt(dashCredentials.jdbcurl, sessionKey);
 					line = line.replace("%%DASH_DB_JDBC_URL%%", encryptedJdbcUrl);
+				} else if (line.contains("%%DATE_END_FILTER%%")) {
+					Calendar c = new GregorianCalendar();
+					c.set(Calendar.DAY_OF_MONTH,  1);
+					String dateEndFilter = new SimpleDateFormat("YYYY-MM-dd").format(c.getTime());
+					line = line.replace("%%DATE_END_FILTER%%", dateEndFilter);
+					
 				}
 				sb.append(line);
 			}

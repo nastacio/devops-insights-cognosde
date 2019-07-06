@@ -430,7 +430,7 @@
 						"2007-01-01"
 					],
 					"to": [
-						"2019-06-01"
+						"%%DATE_END_FILTER%%"
 					],
 					"attributeUniqueNames": [
 						"CTGOV.START_DATE"
