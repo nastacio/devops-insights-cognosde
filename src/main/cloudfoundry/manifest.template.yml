@@ -4,11 +4,8 @@ applications:
   memory: 256M
   disk_quota: 1024M
   instances: 1
-  host: app-template-name
-  domain: mybluemix.net
   env:
     JBP_CONFIG_LIBERTY: 'app_archive: {features: ["appState-2.0", "beanValidation-2.0", "cloudAutowiring-1.0", "ejbLite-3.2", "el-3.0", "jaxrs-2.1", "jndi-1.0", "json-1.0", "jsonb-1.0", "jsp-2.3", "managedBeans-1.0", "websocket-1.1"]}'
-  buildpack: liberty-for-java
   services:
   - ctgov-db
   - ctgov-cognos-de
