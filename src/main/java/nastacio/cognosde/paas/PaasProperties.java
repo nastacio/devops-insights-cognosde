@@ -145,19 +145,26 @@ public class PaasProperties {
     }
 
     /**
+     * Returns the DB2 service information.
      * 
+     * It attempts to first read the information as a DB2 Data Ware 
      * @return
      * @throws CognosException
      * @throws IOException
      */
     private DashDBService readPaaSDashServiceProperties() throws CognosException, IOException {
-        final String dashDBServicesLabel = "dashDB";
-        JsonArray dashDBServicesJson = vcapServicesJsonObject.getJsonArray(dashDBServicesLabel);
-        if (dashDBServicesJson == null) {
-            String errMsg = MessageFormat.format("No service group {0} in service definitions: {1}.",
-                    dashDBServicesLabel, vcapServicesJsonObject.keySet().stream().collect(Collectors.joining(",")));
-            throw new CognosException(errMsg);
-        }
+		final String dashDBServicesLabel = "dashDB";
+		JsonArray dashDBServicesJson = vcapServicesJsonObject.getJsonArray(dashDBServicesLabel);
+		if (dashDBServicesJson == null) {
+			final String dashDBTxServicesLabel = "dashDB For Transactions";
+			dashDBServicesJson = vcapServicesJsonObject.getJsonArray(dashDBTxServicesLabel);
+			if (dashDBServicesJson == null) {
+				String errMsg = MessageFormat.format("No service group {0} or {1} in service definitions: {2}.",
+						dashDBServicesLabel, dashDBTxServicesLabel,
+						vcapServicesJsonObject.keySet().stream().collect(Collectors.joining(",")));
+				throw new CognosException(errMsg);
+			}
+		}
 
         Jsonb jsonb = JsonbBuilder.create();
         DashDBService[] dashServices = jsonb.fromJson(dashDBServicesJson.toString(), DashDBService[].class);
